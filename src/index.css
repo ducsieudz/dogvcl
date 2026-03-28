@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #9b3f00;
+  --color-primary-container: #ff7a2c;
+  --color-on-primary: #fff0ea;
+  --color-on-primary-container: #401600;
+  --color-secondary: #004be2;
+  --color-secondary-container: #c5d0ff;
+  --color-on-secondary: #f2f1ff;
+  --color-on-secondary-container: #003ab4;
+  --color-tertiary: #006a28;
+  --color-tertiary-container: #5cfd80;
+  --color-on-tertiary: #cfffce;
+  --color-on-tertiary-container: #005d22;
+  --color-error: #b02500;
+  --color-error-container: #f95630;
+  --color-on-error: #ffefec;
+  --color-on-error-container: #520c00;
+  --color-background: #fff4ef;
+  --color-on-background: #4a2506;
+  --color-surface: #fff4ef;
+  --color-on-surface: #4a2506;
+  --color-surface-variant: #ffd4b9;
+  --color-on-surface-variant: #7f512e;
+  --color-outline: #9e6b46;
+  --color-outline-variant: #dba177;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #ffede4;
+  --color-surface-container: #ffe3d1;
+  --color-surface-container-high: #ffdcc5;
+  --color-surface-container-highest: #ffd4b9;
+
+  --font-sans: "Inter", sans-serif;
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer utilities {
+  .editorial-shadow {
+    box-shadow: 0 40px 80px -20px rgba(74, 37, 6, 0.08);
+  }
+  .kinetic-card-shadow {
+    box-shadow: 0 40px 40px -20px rgba(74, 37, 6, 0.06);
+  }
+  .glass-badge {
+    background: rgba(255, 244, 239, 0.7);
+    backdrop-filter: blur(20px);
+  }
+  .nope-stamp {
+    border: 8px solid var(--color-error);
+    color: var(--color-error);
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    transform: rotate(-20deg);
+    display: inline-block;
+    letter-spacing: 0.1em;
+    font-family: var(--font-headline);
+  }
+  .like-stamp {
+    border: 8px solid var(--color-primary);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    transform: rotate(-15deg);
+    display: inline-block;
+    letter-spacing: 0.1em;
+    font-family: var(--font-headline);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
